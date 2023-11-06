@@ -9,7 +9,7 @@ function SlideOver() {
     return (
         <div className="w-screen h-screen flex items-center justify-center">
             <div
-                onClick={toggleSlideover}
+                // onClick={toggleSlideover}
                 className="cursor-pointer px-5 py-2 text-sm border text-gray-500 hover:bg-gray-100 rounded border-gray-300"
             >
                 Toggle Slide-over

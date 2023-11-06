@@ -7,8 +7,8 @@ import SlideOver from "./components/SlideOver";
 function App() {
   return (
     <>
-      {/* <Navbar2 /> */}
       <Navbar />
+      {/* <Navbar2 /> */}
       {/* <SlideOver /> */}
       <Home />
     </>

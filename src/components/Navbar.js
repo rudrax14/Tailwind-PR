@@ -45,27 +45,11 @@ function Navbar() {
                 </div>
             </nav>
 
-            <div>
-                {/* black  */}
-                <div
-                    className={` duration-500 ease-out transition-all absolute bg-gray-900 ${open ? 'opacity-50' : 'opacity-0'}`}
-                ></div>
-                <div
-                    className={`w-12 bg-white absolute right-0 duration-300 ease-out transition-all ${open ? '' : 'translate-x-full'}`}
-                >
-                    <a
-                        href="#"
-                        className="text-2xl cursor-pointer absolute text-gray-600 top-0 w-8 h-8 flex items-center justify-center right-0 mt-5 mr-5'"
-                        onClick={clickHandler}
-                    >
-                        {open ? "✖" : "☰"}
-                    </a>
-                </div>
-            </div>
+
 
             {/* Conditional div for sliding in from the right */}
-            {/* {open && (
-                <div className="fixed h-full w-screen lg:hidden bg-black/50 backdrop-blur-sm top-0 right-0 transform transition-transform translate-x-full duration-500 ease-in">
+
+            {/* <div className="fixed h-full w-screen md:hidden bg-black/50 backdrop-blur-sm top-0 right-0 transform transition-transform translate-x-full duration-500 ease-in">
                     <div className="fixed top-0 right-0 h-full w-52 bg-gray-800 text-white p-4 md:hidden">
                         <a
                             href="#"
@@ -80,8 +64,32 @@ function Navbar() {
                             <li className="md:px-2">Contact</li>
                         </ul>
                     </div>
+                </div> */}
+            <div>
+
+                <div className={`h-full w-screen bg-black right-0 top-0 absolute inset-0 transform duration-500 ease-in transition-all ${open ? 'opacity-50' : 'opacity-0'}`} onClick={clickHandler}
+                >
                 </div>
-            )} */}
+                <div
+                    onClick={clickHandler}
+                    className={` w-40 bg-white h-full absolute right-0 top-0 duration-300 ease-out transition-all ${open ? '' : 'translate-x-full'}`}
+                >
+                    <a
+                        href="#"
+                        className="text-2xl cursor-pointer absolute text-gray-600 top-0 w-8 h-8 flex items-center justify-center right-0 mt-5 mr-5"
+                        onClick={clickHandler}
+                    >
+                        {open ? "✖" : "☰"}
+                    </a>
+                    <div>
+                        <ul className={`md:flex text-semibold text-xl justify-center ${open ? "block" : "hidden"}`}>
+                            <li className="md:px-2">Home</li>
+                            <li className="md:px-2">About</li>
+                            <li className="md:px-2">Contact</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }

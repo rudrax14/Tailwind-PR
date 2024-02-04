@@ -1,13 +1,18 @@
 import React from 'react'
+import Navbar from './Navbar'
 
 function Home() {
     return (
-        <div className=' mt-12'>
+        <>
+            <div className='bg-slate-800'>
 
+                <Navbar />
+                <div className=' mt-12 h-screen flex justify-center items-center'>
+                    <h1 className='text-white font-bold text-6xl'>NAVBAR</h1>
+                </div>
+            </div>
 
-            <div className=' text-red-900 '>Home</div>
-
-        </div>
+        </>
     )
 }
 

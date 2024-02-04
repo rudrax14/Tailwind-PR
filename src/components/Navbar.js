@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { ImCross } from "react-icons/im";
+import { IoIosArrowDown } from "react-icons/io";
+import { Link } from "react-router-dom";
 function Navbar() {
     const [open, setOpen] = useState(false);
 
@@ -13,10 +15,25 @@ function Navbar() {
             <nav
                 className={`bg-slate-900 text-white md:flex md:justify-between justify-center w-screen items-center fixed top-0 z-10`}
             >
-                <div className="flex justify-between items-center h-12 px-4 ">
-                    <div className="font-bold text-2xl md:flex items-center">
-                        Navbar
-                    </div>
+                <div className="mx-auto flex  w-full max-w-7xl justify-between px-4 h-12 text-sm">
+                    <section className="flex items-center gap-10">
+                        <div className="font-bold text-2xl md:flex items-center">
+                            Navbar
+                        </div>
+                        <div className="hidden md:flex items-center gap-4 transition-all">
+                            <Link to="/home" className="relative group  px-2 py-6 transition-all">
+                                <p className="flex cursor-pointer items-center gap-2 group-hover:text-gray-300">
+                                    <span>Features</span>
+                                    <IoIosArrowDown className="mt-1 rotate-180 group-hover:rotate-0 transition-all" />
+                                </p>
+                                {/* dropdown */}
+                                <div className="absolute top-10 px-6 flex-col gap-1 hidden rounded-lg py-3 bg-white shadow-md transition-all group-hover:flex text-black">
+                                    Hello
+                                </div>
+                            </Link>
+                        </div>
+                    </section>
+
                     <div className="handburger md:hidden ml-2 pr-6">
                         <a
                             href="#"

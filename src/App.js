@@ -8,11 +8,16 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+import Nav2 from "./components/Nav2";
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
       element: <Home />,
+    },
+    {
+      path: "/nav2",
+      element: <Nav2 />,
     },
     {
       path: "/accordion",
